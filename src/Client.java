@@ -3,7 +3,6 @@ import Ihm.Principale;
 
 import java.rmi.Naming;
 
-//Ceci est un test
 public class Client {
     public static void main(String[] args) {
         try {

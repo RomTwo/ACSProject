@@ -3,7 +3,7 @@ package Classe;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Competition implements Serializable{
+public class Competition implements Serializable {
     private int id;
     private String title;
     private String type;
@@ -45,5 +45,9 @@ public class Competition implements Serializable{
 
     public void addViewers(String viewer) {
         this.viewers.add(viewer);
+    }
+
+    public void removeViewers(String viewer) {
+        this.viewers.remove(viewer);
     }
 }

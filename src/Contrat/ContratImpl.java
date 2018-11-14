@@ -73,7 +73,12 @@ public class ContratImpl extends UnicastRemoteObject implements Contrat {
 
     @Override
     public void unfollowEvent(String userId, int eventId) throws RemoteException {
-        
+        System.out.println("you unfollow this event");
+        for (Competition item : this.competitions) {
+            if (item.getId() == eventId) {
+                item.removeViewers(getName(userId));
+            }
+        }
     }
 
     /**

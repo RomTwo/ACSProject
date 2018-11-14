@@ -13,13 +13,15 @@ public class SecondFrame extends JFrame {
     private Previous previous;
     private Principale fen;
     private Competition comp;
+    private String userId;
     private JLabel title;
     private JLabel versus;
 
-    public SecondFrame(Principale p, Competition c) {
+    public SecondFrame(Principale p, Competition c, String id) {
         super();
         this.fen = p;
         this.comp = c;
+        this.userId = id;
         this.build();
     }
 
@@ -29,7 +31,7 @@ public class SecondFrame extends JFrame {
         this.center = Box.createVerticalBox();
         this.right = Box.createVerticalBox();
 
-        this.previous = new Previous(this);
+        this.previous = new Previous(this, this.userId, this.comp.getId());
         this.title = new JLabel(this.comp.getTitle());
         this.versus = new JLabel(this.comp.getTeam1().getName() + " VS " + this.comp.getTeam2().getName());
 
@@ -52,5 +54,6 @@ public class SecondFrame extends JFrame {
     public Principale getFen() {
         return fen;
     }
+
 }
 
