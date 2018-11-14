@@ -71,6 +71,11 @@ public class ContratImpl extends UnicastRemoteObject implements Contrat {
         }
     }
 
+    @Override
+    public void unfollowEvent(String userId, int eventId) throws RemoteException {
+        
+    }
+
     /**
      * Return username of user in function of his id
      *

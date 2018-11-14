@@ -28,4 +28,6 @@ public interface Contrat extends Remote {
 
     void followEvent(String userId, int eventId) throws RemoteException;
 
+    void unfollowEvent(String userId, int eventId) throws RemoteException;
+
 }

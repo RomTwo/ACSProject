@@ -42,6 +42,15 @@ public class Sport extends JPanel {
         return p;
     }
 
+    public Competition getById(int id) {
+        for (Competition item : this.competitions) {
+            if (item.getId() == id) {
+                return item;
+            }
+        }
+        return null;
+    }
+
     @Override
     public Principale getParent() {
         return parent;

@@ -23,6 +23,8 @@ public class Go extends JButton implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         try {
             this.parent.getParent().getObjDist().followEvent(this.parent.getParent().getId(), this.id);
+            SecondFrame sf = new SecondFrame(this.parent.getParent(), this.parent.getById(this.id));
+            this.parent.getParent().setVisible(false);
         } catch (RemoteException e1) {
             e1.printStackTrace();
         }
