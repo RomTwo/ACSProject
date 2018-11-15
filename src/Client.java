@@ -1,4 +1,5 @@
 import Contrat.Contrat;
+import Ihm.Admin;
 import Ihm.Principale;
 
 import java.rmi.Naming;
@@ -16,6 +17,8 @@ public class Client {
 
             if (id == null) {
                 System.out.println("Connexion impossible cet utilisateur est déjà connecté...");
+            } else if (args[1].equals("admin")) {
+                Admin admin = new Admin(id, objDist);
             } else {
                 Principale p = new Principale(id, objDist);
             }

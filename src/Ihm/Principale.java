@@ -29,7 +29,7 @@ public class Principale extends JFrame {
     private void build() {
         this.title = new JLabel(TITLE);
         this.title.setAlignmentX(Component.CENTER_ALIGNMENT);
-        this.logout = new Logout(this);
+        this.logout = new Logout(objDist, id);
         this.res = new Results();
         this.sport = new Sport(this);
 
@@ -40,7 +40,7 @@ public class Principale extends JFrame {
         this.left.add(this.res);
         this.right.add(this.logout);
 
-        this.setTitle("Essais IHM");
+        this.setTitle("Compétitions");
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         this.setLayout(new BorderLayout());
         this.pack();

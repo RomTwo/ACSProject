@@ -1,5 +1,7 @@
 package Ihm;
 
+import Contrat.Contrat;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -9,10 +11,12 @@ import java.rmi.RemoteException;
 public class Logout extends JButton implements ActionListener {
 
     private static final String TITLE = "Logout";
-    private Principale parent;
+    private Contrat objDist;
+    private String id;
 
-    public Logout(Principale p) {
-        this.parent = p;
+    public Logout(Contrat c, String i) {
+        this.objDist = c;
+        this.id = i;
         this.setText(TITLE);
         this.addActionListener(this);
         this.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -21,7 +25,7 @@ public class Logout extends JButton implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         try {
-            this.parent.getObjDist().close(this.parent.getId());
+            this.objDist.close(this.id);
             System.exit(0);
         } catch (RemoteException e1) {
             e1.printStackTrace();

@@ -36,6 +36,11 @@ public class ContratImpl extends UnicastRemoteObject implements Contrat {
         super();
         Scenario sc = new Scenario();
         this.competitions.add(sc.foot());
+        this.competitions.add(sc.foot());
+        this.competitions.add(sc.foot());
+        this.competitions.add(sc.foot());
+        this.competitions.add(sc.foot());
+        this.competitions.add(sc.foot());
     }
 
     @Override
