@@ -13,7 +13,7 @@ public class Client {
             Contrat objDist = (Contrat) Naming.lookup(url);
 
             String id = objDist.getId(args[1]);
-            String followedEvent = null;
+            //String followedEvent = null;
 
             if (id == null) {
                 System.out.println("Connexion impossible cet utilisateur est déjà connecté...");

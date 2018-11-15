@@ -1,13 +1,17 @@
 package Ihm;
 
 import javax.swing.*;
+
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.rmi.RemoteException;
 
 public class Go extends JButton implements ActionListener {
 
-    private static final String TITLE = "Go";
+	private static final long serialVersionUID = 1L;
+	
+    private static final String TITLE = "Test";
     private int id;
     private Sport parent;
 

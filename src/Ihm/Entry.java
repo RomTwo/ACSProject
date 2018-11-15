@@ -9,7 +9,9 @@ import java.awt.*;
 
 public class Entry extends JPanel implements DocumentListener {
 
-    private JTextField entry;
+	private static final long serialVersionUID = 1L;
+	
+	private JTextField entry;
     private Send send;
     private Box centerBox;
 

@@ -10,6 +10,8 @@ import java.util.Objects;
 
 public class ListComp extends JComboBox<String> implements ActionListener {
 
+	private static final long serialVersionUID = 1L;
+	
     private ArrayList<Competition> competitions = new ArrayList<>();
     private Competition choice = null;
 
