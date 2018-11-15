@@ -1,5 +1,7 @@
 package Ihm;
 
+import Classe.Competition;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -9,17 +11,16 @@ public class Entry extends JPanel {
     private Send send;
     private Box centerBox;
 
-    public Entry() {
+    public Entry(Competition c) {
         super();
         this.setLayout(new BorderLayout());
-        this.setVisible(false);
-        this.build();
+        this.build(c);
     }
 
-    private void build() {
+    private void build(Competition c) {
         this.centerBox = Box.createVerticalBox();
         this.entry = new JTextField();
-        this.send = new Send();
+        this.send = new Send(c);
 
         this.centerBox.add(this.entry);
         this.centerBox.add(this.send);

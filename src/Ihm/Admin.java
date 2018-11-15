@@ -14,7 +14,6 @@ public class Admin extends JFrame {
     private Logout logout;
     private ListComp listComp;
     private Start start;
-    private Entry entry;
     private Box northBox;
     private Contrat objDist;
     private String id;
@@ -30,12 +29,11 @@ public class Admin extends JFrame {
         this.northBox = Box.createVerticalBox();
 
         this.logout = new Logout(objDist, id);
-        this.entry = new Entry();
         this.title = new JLabel(TITLE);
         this.title.setAlignmentX(Component.CENTER_ALIGNMENT);
         this.listComp = new ListComp(this.objDist.getCompetitions());
         this.listComp.setAlignmentX(Component.CENTER_ALIGNMENT);
-        this.start = new Start(this.entry, null, this.listComp);
+        this.start = new Start(this, null, this.listComp);
         this.start.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         this.northBox.add(this.title);
@@ -49,7 +47,6 @@ public class Admin extends JFrame {
 
         this.getContentPane().add(this.northBox, BorderLayout.NORTH);
         this.getContentPane().add(this.logout, BorderLayout.EAST);
-        this.getContentPane().add(this.entry, BorderLayout.SOUTH);
 
         this.setVisible(true);
     }

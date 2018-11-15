@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class ListComp extends JComboBox<String> implements ActionListener{
+public class ListComp extends JComboBox<String> implements ActionListener {
 
     private ArrayList<Competition> competitions = new ArrayList<>();
     private Competition choice = null;
@@ -16,6 +16,8 @@ public class ListComp extends JComboBox<String> implements ActionListener{
     public ListComp(ArrayList<Competition> c) {
         super();
         this.addActionListener(this);
+
+        this.competitions.addAll(c);
         for (Competition item : c) {
             this.addItem(item.getTeam1().getName() + " VS " + item.getTeam2().getName());
         }
@@ -31,11 +33,19 @@ public class ListComp extends JComboBox<String> implements ActionListener{
         return null;
     }
 
+    public Competition getChoice() {
+        return choice;
+    }
+
+    private void setChoice(Competition choice) {
+        this.choice = choice;
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         JComboBox comboBox = (JComboBox) e.getSource();
-        String t = (String)comboBox.getSelectedItem();
-        System.out.println(t);
+        String t = (String) comboBox.getSelectedItem();
+        setChoice(getByTitle(t));
     }
 
 }
