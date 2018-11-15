@@ -22,7 +22,7 @@ public class Entry extends JPanel implements DocumentListener {
     private void build(Competition c) {
         this.centerBox = Box.createVerticalBox();
         this.entry = new JTextField();
-        this.send = new Send(c);
+        this.send = new Send(c, this);
 
         this.entry.getDocument().addDocumentListener(this);
 
@@ -30,6 +30,10 @@ public class Entry extends JPanel implements DocumentListener {
         this.centerBox.add(this.send);
 
         this.add(this.centerBox, BorderLayout.CENTER);
+    }
+
+    public void clearTextField(){
+        this.entry.setText(null);
     }
 
     @Override

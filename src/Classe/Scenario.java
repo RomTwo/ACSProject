@@ -72,4 +72,15 @@ public class Scenario {
         return foot;
     }
 
+    public Competition foot2() {
+
+        //Les équipes
+        Team madrid = new Team(1, "Lyon", null);
+        Team barca = new Team(2, "PSG", null);
+
+        //Les compétitions
+        Competition foot = new Competition(1, "Champion's Leaque", "Football", madrid, barca);
+
+        return foot;
+    }
 }
