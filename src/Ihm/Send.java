@@ -10,6 +10,7 @@ public class Send extends JButton implements ActionListener {
 
     private static final String TITLE = "send";
     private Competition comp;
+    private String event;
 
     public Send(Competition c) {
         super();
@@ -18,8 +19,12 @@ public class Send extends JButton implements ActionListener {
         this.comp = c;
     }
 
+    public void setEvent(String event) {
+        this.event = event;
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        System.out.println(this.event);
     }
 }

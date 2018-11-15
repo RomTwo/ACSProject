@@ -33,7 +33,7 @@ public class Admin extends JFrame {
         this.title.setAlignmentX(Component.CENTER_ALIGNMENT);
         this.listComp = new ListComp(this.objDist.getCompetitions());
         this.listComp.setAlignmentX(Component.CENTER_ALIGNMENT);
-        this.start = new Start(this, null, this.listComp);
+        this.start = new Start(this, this.listComp);
         this.start.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         this.northBox.add(this.title);

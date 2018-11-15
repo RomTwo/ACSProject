@@ -15,21 +15,26 @@ public class Start extends JButton implements ActionListener {
     private Admin parent;
 
 
-    public Start(Admin p, Competition c, ListComp l) {
+    public Start(Admin p, ListComp l) {
         super();
-        this.comp = c;
+        this.comp = null;
         this.listComp = l;
         this.parent = p;
         this.setText(TITLE);
         this.addActionListener(this);
     }
 
+    private void setComp(Competition comp) {
+        this.comp = comp;
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        //System.out.println(this.comp.getId() + " " + this.comp.getTitle());
+        setComp(this.listComp.getChoice());
+        System.out.println(this.comp.getId() + " " + this.comp.getTitle());
         this.listComp.setVisible(false);
         this.setVisible(false);
-        Entry entry = new Entry();
+        Entry entry = new Entry(this.comp);
         this.parent.getContentPane().add(entry, BorderLayout.SOUTH);
     }
 }
