@@ -67,7 +67,7 @@ public class Scenario {
         Team barca = new Team(2, "FC Barcelone", barcaPlayers);
 
         //Les compétitions
-        Competition foot = new Competition(1, "Champion's Leaque", "Football", madrid, barca);
+        Competition foot = new Competition(1, "Champion's League", "Football", madrid, barca);
 
         return foot;
     }
@@ -79,7 +79,7 @@ public class Scenario {
         Team barca = new Team(2, "PSG", null);
 
         //Les compétitions
-        Competition foot = new Competition(1, "Champion's Leaque", "Football", madrid, barca);
+        Competition foot = new Competition(1, "Champion's League", "Football", madrid, barca);
 
         return foot;
     }

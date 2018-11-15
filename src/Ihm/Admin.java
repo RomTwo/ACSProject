@@ -8,7 +8,9 @@ import java.rmi.RemoteException;
 
 public class Admin extends JFrame {
 
-    private static final String TITLE = "Administration";
+	private static final long serialVersionUID = 1L;
+
+	private static final String TITLE = "Administration";
 
     private JLabel title;
     private Logout logout;
